@@ -1,4 +1,4 @@
-![Portfolio Screenshot](cp.png)
+![Portfolio Screenshot](zainulabideen.png)
 
 # 🌌 Zain Portfolio Website
 
