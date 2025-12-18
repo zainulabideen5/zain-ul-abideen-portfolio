@@ -1021,4 +1021,40 @@ body::after {
   .social-links {
     justify-content: center;
   }
+
+  #nav-menu {
+    display: none;
 }
+#nav-menu.active {
+    display: block;
+}
+
+#nav-menu {
+    display: none;
+    position: absolute; /* or fixed */
+    top: 80px; /* below navbar */
+    left: 0;
+    width: 100%;
+    background: #111;
+    z-index: 999;
+}
+
+#nav-menu.active {
+    display: block;
+}
+
+
+#hamburger {
+    display: block; /* visible on mobile */
+}
+
+@media(min-width: 768px) {
+    #hamburger {
+        display: none; /* hide on desktop */
+    }
+}
+}
+
+
+
+
