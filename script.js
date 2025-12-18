@@ -56,7 +56,6 @@ function initTypingEffect() {
     const typingText = document.getElementById('typing-text');
     const phrases = [
         'Web Developer',
-        'Full Stack Developer', 
         'Problem Solver',
         'Code Explorer',
        
