@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initSectionAnimations();
 });
 
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
 function initNavbar() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
