@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
     initSectionAnimations();
 });
 
+hamburger.addEventListener('click', () => {
+    const isActive = hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+    if (isActive) {
+        observer.disconnect(); // menu open hone par observer ko temporary stop karo
+    } else {
+        sections.forEach(section => observer.observe(section)); // menu close hone par observer fir start
+    }
+});
 
 
 
