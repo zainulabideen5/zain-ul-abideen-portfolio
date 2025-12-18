@@ -1,6 +1,6 @@
 ![Portfolio Screenshot](cp.png)
 
-# 🌌 Amine Portfolio Website
+# 🌌 Zain Portfolio Website
 
 Welcome to my personal **portfolio website**, a modern showcase of my projects, skills, and contact information.  
 The website features smooth animations, typing effects, responsive design, and a clean dark red theme.
