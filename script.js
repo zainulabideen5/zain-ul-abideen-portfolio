@@ -13,16 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
     initSectionAnimations();
 });
 
-hamburger.addEventListener('click', () => {
-    const isActive = hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-
-    if (isActive) {
-        observer.disconnect(); // menu open hone par observer ko temporary stop karo
-    } else {
-        sections.forEach(section => observer.observe(section)); // menu close hone par observer fir start
-    }
-});
+if (window.innerWidth > 768) { // sirf desktop pe observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const activeLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '-100px 0px -100px 0px'
+    });
+    
+    sections.forEach(section => observer.observe(section));
+}
 
 
 
