@@ -14,10 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+
 
 function initNavbar() {
     const hamburger = document.getElementById('hamburger');
